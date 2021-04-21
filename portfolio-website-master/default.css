@@ -11,7 +11,7 @@
 
 	--previewBg:rgb(251, 249, 243, 0.8);
 	--previewShadow:#f0ead6;
-
+--fadecolor:rgba(228, 225, 225, 0.267);
 
 	--buttonColor:black;
 
@@ -135,6 +135,7 @@ h6 { font-size: 16px;}
 .dots-wrapper{
 	display: flex;
 	padding: 10px;
+	cursor: pointer;
 }
 
 #dot-1{
@@ -155,7 +156,7 @@ h6 { font-size: 16px;}
 	width: 15px;
 	border-radius: 50%;
 	margin: 5px;
-
+cursor: pointer;
 	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
@@ -173,8 +174,8 @@ h6 { font-size: 16px;}
 	display: block;
 	margin:0 auto;
 
-	height: 200px;
-	width: 200px;
+	height: 160px;
+	width: 160px;
 	object-fit: cover;
 	border:2px solid var(--borderColor);
 }
@@ -221,6 +222,7 @@ h6 { font-size: 16px;}
 
 #purple-mode{
 	background-color: #7E4C74;
+	
 }
 
 #settings-note{
@@ -302,14 +304,20 @@ h6 { font-size: 16px;}
 }
 
 .social-links{
-	display: grid;
+	/* display: grid;
 	align-content: center;
+	text-align: center; */
+	display: flex;
+	align-items: center;
 	text-align: center;
+	flex-direction:column;
+	cursor: pointer;
+	
 }
 
-#social_img{
+/* #social_img{
 	width: 100%;
-}
+} */
 
 
 .post-wrapper{
@@ -431,5 +439,17 @@ h6 { font-size: 16px;}
 
 }
 
-
-
+/* animations: */
+.fade{
+	opacity: 0;
+	transition: all 0.5s ease;
+	color: --fadecolor;
+	padding:  20px 2px;
+	transform: translateX(50px);
+	
+	
+}
+span.fade{
+	opacity: 1;
+	transform: translateX(0px)
+}
